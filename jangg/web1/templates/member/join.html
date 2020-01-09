@@ -1,0 +1,33 @@
+{% include './header.html' %}
+<body>
+{% include './menu.html' %}
+
+<hr />
+
+    <h3>회원가입</h3>
+    <hr />
+    <form action = "/member/join" method='POST'>
+        <table style="margin: 10px;">
+            <tr>
+                
+                <td>아이디: <input type='text' name="id"/><</td>
+                <td>비밀번호: <input type='text' name="pw"/></td>
+                <td>비밀번호 확인: <input type='text'/></td>
+                <td>이름: <input type='text' name='name'/></td>
+                <tr>
+                    생년월일: <br>
+                    <td><input type='text' name="yy"/></td>
+                    <td><input type='text' name="mm"/></td>
+                    <td><input type='text' name="dd"/></td>
+                </tr>
+                <td>성별: <input type='text' name='gd' /></td>
+                <td>이메일: <input type='text' name='em'/></td>
+                <td>휴대전화: <input type='text'name='ph'/></td>
+            </tr>
+        </table>
+    
+    <input type='submit' value='회원가입'>
+    </form>
+    
+</body>
+</html>
