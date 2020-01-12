@@ -1,7 +1,7 @@
 from django.db import models
 
 # Create your models here.
-class join(models.Model):
+class table(models.Model):
     object = models.Manager()#vs code 오류 제거용
 
     id     = models.AutoField(primary_key = True)#게시판 글 = 기본키 

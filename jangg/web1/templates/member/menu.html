@@ -27,10 +27,13 @@
       </ul>
     </div>
     <div>
-      <a class="p-2 text-white" href="/member/login">로그인</a>
-      <a class="p-2 text-white" href="/member/edit">회원정보수정</a>
-      <a class="p-2 text-white" href="/member/delete">회월탈퇴</a>
-      <a class="btn btn-outline-primary" href="/member/join">회원가입</a>
+      {% if not request.session.username %}
+        <a class="p-2 text-white" href="/member/login">로그인</a>
+      {% else %}  
+        <a class="p-2 text-white" href="/member/edit">회원정보수정</a>
+        <a class="p-2 text-white" href="/member/delete">회월탈퇴</a>
+      {% endif %}  
+        <a class="btn btn-outline-primary" href="/member/join">회원가입</a>
     </div>
   </nav>
 </div>
